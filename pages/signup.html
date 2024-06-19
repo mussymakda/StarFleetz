@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 left d-flex justify-content-center align-items-center">
+                <img class="logo img-fluid" src="../images/logo.png" alt="Logo">
+            </div>
+            <div class="col-md-6 right d-flex flex-column justify-content-between bg-white p-5">
+                <form id="multiStepForm" class="signup-form">
+                    <!-- Tab 1: Personal Information -->
+                    <div class="step active">
+                        <h2 class="font-weight-bold">Sign up</h2>
+                        <h3 class="mb-5">Get your campaign up and running in just minutes.</h3>
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" class="form-control" >
+                        </div>
+                    </div>
+                    <!-- Tab 2: Organization Information -->
+                    <div class="step">
+                        <h2 class="font-weight-bold">Organization Information</h2>
+                        <div class="form-group">
+                            <label for="orgName">Organization Name</label>
+                            <input type="text" id="orgName" name="orgName" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="industry">Industry</label>
+                            <select id="industry" name="industry" class="form-control" >
+                                <option value="">Select Industry</option>
+                                <option value="IT">IT</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Healthcare">Healthcare</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Website</label>
+                            <input type="url" id="website" name="website" class="form-control" >
+                        </div>
+                    </div>
+                    <!-- Tab 3: OTP Verification -->
+                    <div class="step">
+                        <h2 class="font-weight-bold">OTP Verification</h2>
+                        <p>We just sent you an SMS with a 4-digit code to +000 123546. Please enter the code below.</p>
+                        <div class="form-group">
+                            <input type="text" id="otp" name="otp" class="form-control" maxlength="4" pattern="[0-9]{4}"
+                                >
+                        </div>
+                    </div>
+                    <!-- Tab 4: Location Information -->
+                    <div class="step">
+                        <h2 class="font-weight-bold">Location Information</h2>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="address2">Address Line 2</label>
+                            <input type="text" id="address2" name="address2" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State/Province</label>
+                            <input type="text" id="state" name="state" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">ZIP/Postal Code</label>
+                            <input type="text" id="zip" name="zip" class="form-control" >
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" name="country" class="form-control" >
+                        </div>
+                    </div>
+                    <!-- Tab 5: Account Type -->
+                    <div class="step">
+                        <h2 class="font-weight-bold">Account Type</h2>
+                        <div class="form-group">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="advertiser" name="accountType" value="advertiser"
+                                    class="custom-control-input" >
+                                <label class="custom-control-label" for="advertiser">Advertiser</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="agency" name="accountType" value="agency"
+                                    class="custom-control-input" >
+                                <label class="custom-control-label" for="agency">Agency</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Previous and Next buttons -->
+                    <div class="form-group button-container">
+                        <button type="button" class="submit prev btn btn-secondary">Previous</button>
+                        <button type="button" class="submit next btn btn-primary">Next</button>
+                        <button type="submit" class="submit btn btn-success" style="display: none;">Submit</button>
+                    </div>
+                </form>
+                <!-- Bottom section -->
+                <div class="bottom">
+                    <hr>
+                    <footer>
+                        <p>By proceeding, you agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy
+                                Policy</a></p>
+                        <div class="links">
+                            <a href="#">Help</a>
+                            <a href="#">Privacy</a>
+                            <a href="#">Terms</a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+    <script>
+        $(document).ready(function () {
+            const form = $('#multiStepForm');
+            const steps = form.find('.step');
+            const prevButton = form.find('.prev');
+            const nextButton = form.find('.next');
+            let currentStep = 0;
+
+            updateButtons();
+
+            nextButton.on('click', function () {
+                if (validateForm()) {
+                    $(steps[currentStep]).removeClass('active');
+                    currentStep++;
+                    $(steps[currentStep]).addClass('active');
+                    updateButtons();
+                }
+            });
+
+            prevButton.on('click', function () {
+                $(steps[currentStep]).removeClass('active');
+                currentStep--;
+                $(steps[currentStep]).addClass('active');
+                updateButtons();
+            });
+
+            form.on('submit', function (event) {
+                if (!validateForm()) {
+                    event.preventDefault();
+                }
+            });
+
+            function validateForm() {
+                const currentInputs = $(steps[currentStep]).find('input, select');
+                let valid = true;
+                currentInputs.each(function () {
+                    if (!this.checkValidity()) {
+                        this.reportValidity();
+                        valid = false;
+                        return false;
+                    }
+                });
+                return valid;
+            }
+
+            function updateButtons() {
+                if (currentStep === 0) {
+                    prevButton.hide();
+                } else {
+                    prevButton.show();
+                }
+
+                if (currentStep === steps.length - 1) {
+                    nextButton.hide();
+                    form.find('button[type="submit"]').show();
+                } else {
+                    nextButton.show();
+                    form.find('button[type="submit"]').hide();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
