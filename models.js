@@ -28,6 +28,6 @@ const User = sequelize.define('User', {
 });
 
 // Sync the database
-await sequelize.sync();
+sequelize.sync();
 
 module.exports = { sequelize, User };
