@@ -1,2 +1,0 @@
-# StarFleetz
- An Ads business
