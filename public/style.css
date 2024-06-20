@@ -21,10 +21,14 @@ body {
 /* Container settings */
 .container-fluid {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
+    
 }
-
+p.signup {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    margin-top: 33px;
+    text-align: center;
+}
 .left {
     flex: 1;
     display: flex;
@@ -41,7 +45,7 @@ body {
 }
 
 .right {
-    flex-grow: 1; /* Expand to fill remaining height */
+    position: relative;flex-grow: 1; /* Expand to fill remaining height */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,7 +53,11 @@ body {
     padding: 40px;
     box-sizing: border-box;
 }
-
+.signup-link{
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
 /* Login form */
 .signup-form {
     height: 80vh;
@@ -65,7 +73,7 @@ body {
 .signup-form h2 {
     font-family: 'Satoshi', sans-serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .signup-form h3 {
@@ -83,11 +91,80 @@ body {
     margin-bottom: 20px;
     padding: 10px;
     background-color: #F6F6F6;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid #CBCBCB;
+    border-radius: 10px;
 }
 
+.custom-radio-group {
+    width: 420px;
+    height: 218px;
+    position: relative;
+    border-radius: 10px;
+    border: 1px #CBCBCB solid;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+}
 
+.custom-radio-group .custom-option {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.custom-radio-group .custom-option input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-radio-group .custom-option input[type="radio"]:checked {
+    border: 5px solid black;
+}
+
+.custom-radio-group .custom-option input[type="radio"]:checked + label::before {
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 0 0 0 2px white;
+}
+
+.custom-radio-group .custom-option label {
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+.custom-radio-group .custom-option p {
+    margin: 0;
+    color: #01041D;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.custom-radio-group .custom-divider {
+    position: absolute;
+    top: 109px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #CBCBCB;
+}
 .login-form {
     width: 100%;
     max-width: 400px;
@@ -102,7 +179,9 @@ body {
 .login-form h2 {
     font-family: 'Satoshi', sans-serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 28px;
+    margin-bottom: 32px;
+
 }
 
 .login-form h3 {
@@ -110,7 +189,7 @@ body {
 }
 
 .login-form label {
-    font-size: 12px;
+    font-size: 16px;
     margin-bottom: 5px;
     font-weight: bold;
 }
@@ -119,8 +198,8 @@ body {
     margin-bottom: 20px;
     padding: 10px;
     background-color: #F6F6F6;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid #CBCBCB;
+    border-radius: 10px;
 }
 /* Bottom section */
 .bottom {
@@ -158,7 +237,7 @@ footer a:hover {
     background-color: #000;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 100px;
     cursor: pointer;
 }
 
@@ -171,18 +250,16 @@ footer a:hover {
 @media (max-width: 480px) {
     .container-fluid {
         height: auto;
-        align-items: flex-start;
+        align-items: flex-center;
     }
 
     .left {
-        height: 10vh;
         order: 1;
     }
 
     .right {
-        height: 100vh;
         order: 2;
-        justify-content: flex-start;
+        justify-content: flex-center;
         padding: 20px;
     }
 
@@ -190,14 +267,17 @@ footer a:hover {
         max-width: 100%;
         margin: 0 auto;
     }
-
+ 
     .signup-form button {
         width: 100%;
+    }
+    .login-form button {
+        border-radius: 100px;
     }
 
     .signup-form .options {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-center;
     }
 
     .bottom {
@@ -212,21 +292,19 @@ footer a:hover {
     }
 
     .left {
-        height: 30vh;
+        height: 30%;
         display: none;
     }
 
     .right {
         padding: 10px;
-        height: 100vh;
-        justify-content: flex-start;
+        justify-content: flex-center;
     }
 
     .signup-form {
         padding: 10px;
     }
 
-    .signup-form input,
     .signup-form button {
         width: 100%;
         font-size: 14px;
@@ -241,10 +319,16 @@ footer a:hover {
         margin-top: 10px;
     }
 
-    .signup {
-        font-size: 14px;
+    .signup p {
+       
+        text-align: center;
+        margin-top: 20px;
     }
 
+    .signup a {
+        color: #F55139;
+        text-decoration: none;
+    }
     footer {
         font-size: 0.7rem;
     }
@@ -304,7 +388,57 @@ footer a:hover {
         padding: 10px 0;
     }
 }
+.options {
+    position: relative;
+    padding: 20px;
+}
 
+.sub-heading{
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #01041D;
+}
+/* Remember Me section */
+.remember-me {
+    height: 22px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.remember-checkbox {
+    width: 19px;
+    height: 19px;
+    border-radius: 3px;
+    border: 1px solid #757575;
+}
+
+.remember-text {
+    text-align: right;
+    color: #697176;
+    font-size: 14px;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+/* Forgot Password section */
+.forgot-password {
+    width: 132px;
+    position: absolute;
+    left: 230px;
+    top: 0;
+    text-align: right;
+    color: #697176;
+    font-size: 14px;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+    line-height: 22px;
+}
 /* Active step display */
 .step {
     display: none;
@@ -312,4 +446,11 @@ footer a:hover {
 
 .step.active {
     display: block;
+}
+a {
+    color: #F55139;
+}
+.next {
+    padding-left: 40px;
+    padding-right: 40px;
 }

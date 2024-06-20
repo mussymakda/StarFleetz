@@ -13,7 +13,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-7 left d-flex justify-content-center align-items-center">
+            <div class="col-md-6 left d-flex justify-content-center align-items-center">
                 <img class="logo img-fluid" src="images/logo.png" alt="Logo">
             </div>
             <div class="col-md-6 right d-flex flex-column justify-content-center bg-white">
@@ -26,10 +26,11 @@
                     <input type="password" id="password" name="password" required>
     
                     <div class="options">
-                        <label>
-                            <input type="checkbox" name="remember" class="remember"> Remember Me
-                        </label>
-                        <a href="#" class="forgot">Forgot password?</a>
+                        <div class="remember-me">
+                            <div class="remember-checkbox"></div>
+                            <div class="remember-text">Remember Me</div>
+                        </div>
+                        <div class="forgot-password">Forgot password?</div>
                     </div>
     
                     <button type="submit" class="submit">Sign In</button>
