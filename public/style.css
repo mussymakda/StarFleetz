@@ -1,28 +1,15 @@
 /* Global styles */
 html, body {
     height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #f5f5f5;
 }
 
 body {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #f5f5f5;
 }
 
 /* Container settings */
-.container-fluid {
-    height: 100vh;
-    
-}
+
 p.signup {
     font-family: 'Satoshi', sans-serif;
     font-weight: 700;
@@ -31,16 +18,14 @@ p.signup {
 }
 .left {
     flex: 1;
-    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #000;
 }
 
 .logo {
-    width: 60%;
+    width: 611px;
     height: auto;
-    max-height: 80%;
     object-fit: contain;
 }
 
@@ -57,7 +42,9 @@ p.signup {
     font-family: 'Satoshi', sans-serif;
     font-weight: 400;
     font-size: 18px;
+    margin-bottom: 40px;
 }
+
 /* Login form */
 .signup-form {
     height: 80vh;
@@ -76,12 +63,11 @@ p.signup {
     font-size: 28px;
 }
 
-.signup-form h3 {
-    margin-bottom: 50px;
-}
 
 .signup-form label {
-    font-size: 12px;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
     margin-bottom: 5px;
     font-weight: bold;
 }
@@ -89,11 +75,40 @@ p.signup {
 .signup-form input,
 .signup-form select {
     margin-bottom: 20px;
-    padding: 10px;
     background-color: #F6F6F6;
     border: 1px solid #CBCBCB;
     border-radius: 10px;
 }
+/* Updated CSS for the form buttons */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.button-container .submit {
+    border-radius: 100px;
+    cursor: pointer;
+    width: auto; /* Ensure the button width adjusts as needed */
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.prev img {
+    -webkit-filter: drop-shadow(2px 2px 4px #292d328a);
+    filter: drop-shadow(2px 2px 4px #292d328a);
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}
+
+/* Ensure form buttons have consistent width */
+.signup-form .step:first-child .submit {
+    width: 100%; /* Make the first step button full width */
+}
+
+
 
 .custom-radio-group {
     width: 420px;
@@ -165,6 +180,10 @@ p.signup {
     height: 1px;
     background: #CBCBCB;
 }
+.login-form p{
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 600;
+}
 .login-form {
     width: 100%;
     max-width: 400px;
@@ -181,7 +200,11 @@ p.signup {
     font-weight: 700;
     font-size: 28px;
     margin-bottom: 32px;
-
+    letter-spacing: -0.01em;
+    line-height: 2.25rem;
+    position: relative;
+  display: inline-block;
+  mix-blend-mode: normal;
 }
 
 .login-form h3 {
@@ -189,12 +212,14 @@ p.signup {
 }
 
 .login-form label {
+    font-family: 'Satoshi', sans-serif;
     font-size: 16px;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
 .login-form input {
+    font-family: 'Inter', sans-serif;
     margin-bottom: 20px;
     padding: 10px;
     background-color: #F6F6F6;
@@ -245,152 +270,10 @@ footer a:hover {
     background-color: #333;
 }
 
-
-
-@media (max-width: 480px) {
-    .container-fluid {
-        height: auto;
-        align-items: flex-center;
-    }
-
-    .left {
-        order: 1;
-    }
-
-    .right {
-        order: 2;
-        justify-content: flex-center;
-        padding: 20px;
-    }
-
-    .signup-form {
-        max-width: 100%;
-        margin: 0 auto;
-    }
- 
-    .signup-form button {
-        width: 100%;
-    }
-    .login-form button {
-        border-radius: 100px;
-    }
-
-    .signup-form .options {
-        flex-direction: column;
-        align-items: flex-center;
-    }
-
-    .bottom {
-        padding: 10px 0;
-    }
-}
-
-@media (max-width: 600px) {
-    .container-fluid {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .left {
-        height: 30%;
-        display: none;
-    }
-
-    .right {
-        padding: 10px;
-        justify-content: flex-center;
-    }
-
-    .signup-form {
-        padding: 10px;
-    }
-
-    .signup-form button {
-        width: 100%;
-        font-size: 14px;
-    }
-
-    .signup-form .options {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .signup-form .forgot {
-        margin-top: 10px;
-    }
-
-    .signup p {
-       
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .signup a {
-        color: #F55139;
-        text-decoration: none;
-    }
-    footer {
-        font-size: 0.7rem;
-    }
-
-    .bottom {
-        padding: 10px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        height: auto;
-    }
-
-    .container-fluid {
-        flex-direction: column;
-        height: 100vh;
-    }
-
-    .left {
-        display: none;
-    }
-
-    .right {
-        padding: 10px;
-        justify-content: flex-start;
-    }
-
-    .signup-form {
-        padding: 10px;
-    }
-
-    .signup-form input,
-    .signup-form button {
-        width: 100%;
-        font-size: 14px;
-    }
-
-    .signup-form .options {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .signup-form .forgot {
-        margin-top: 10px;
-    }
-
-    .signup {
-        font-size: 14px;
-    }
-
-    footer {
-        font-size: 0.7rem;
-    }
-
-    .bottom {
-        padding: 10px 0;
-    }
-}
 .options {
     position: relative;
     padding: 20px;
+    justify-content: space-between;
 }
 
 .sub-heading{
@@ -401,13 +284,9 @@ footer a:hover {
 }
 /* Remember Me section */
 .remember-me {
-    height: 22px;
-    position: absolute;
-    left: 0;
-    top: 0;
     display: flex;
     align-items: center;
-    gap: 5px;
+    margin-bottom: 15px; /* Adjust margin as needed */
 }
 
 .remember-checkbox {
@@ -415,12 +294,12 @@ footer a:hover {
     height: 19px;
     border-radius: 3px;
     border: 1px solid #757575;
+    margin-right: 10px; /* Add margin to separate checkbox from text */
 }
 
 .remember-text {
-    text-align: right;
     color: #697176;
-    font-size: 14px;
+    font-size: 0.825rem;
     font-family: 'Satoshi', sans-serif;
     font-weight: 500;
     line-height: 22px;
@@ -428,13 +307,9 @@ footer a:hover {
 
 /* Forgot Password section */
 .forgot-password {
-    width: 132px;
-    position: absolute;
-    left: 230px;
-    top: 0;
     text-align: right;
     color: #697176;
-    font-size: 14px;
+    font-size: 0.825rem;
     font-family: 'Satoshi', sans-serif;
     font-weight: 500;
     line-height: 22px;

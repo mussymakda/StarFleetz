@@ -14,120 +14,122 @@
             <div class="col-md-6 left d-flex justify-content-center align-items-center">
                 <img class="logo img-fluid" src="../images/logo.png" alt="Logo">
             </div>
-            <div class="col-md-6 right d-flex flex-column justify-content-between bg-white p-5">
-                <form id="multiStepForm" class="signup-form" action="/signup" method="post">
-                    <!-- Tab 1: Personal Information -->
-                    <div class="step active">
-                        <h2 class="font-weight-bold">Sign up</h2>
-                        <h3 class="mb-5 signup-link">Get your campaign up and running in just minutes.</h3>
-                        <div class="form-group">
-                            <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" name="firstName" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" name="lastName" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password" class="form-control" required>
-                        </div>
-                    </div>
-                    <!-- Tab 2: Organization Information -->
-                    <div class="step">
-                        <h2 class="font-weight-bold">Organization Information</h2>
-                        <div class="form-group">
-                            <label for="orgName">Organization Name</label>
-                            <input type="text" id="orgName" name="orgName" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="industry">Industry</label>
-                            <select id="industry" name="industry" class="form-control">
-                                <option value="">Select Industry</option>
-                                <option value="IT">IT</option>
-                                <option value="Finance">Finance</option>
-                                <option value="Healthcare">Healthcare</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="website">Website</label>
-                            <input type="url" id="website" name="website" class="form-control">
-                        </div>
-                    </div>
-                    <!-- Tab 3: OTP Verification -->
-                    <div class="step">
-                        <h2 class="font-weight-bold">OTP Verification</h2>
-                        <p>We just sent you an SMS with a 4-digit code to +000 123546. Please enter the code below.</p>
-                        <div class="form-group">
-                            <input type="text" id="otp" name="otp" class="form-control" maxlength="4" pattern="[0-9]{4}">
-                        </div>
-                    </div>
-                    <!-- Tab 4: Location Information -->
-                    <div class="step">
-                        <h2 class="font-weight-bold">Location Information</h2>
-                        <div class="form-group">
-                            <label for="address">Address</label>
-                            <input type="text" id="address" name="address" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="address2">Address Line 2</label>
-                            <input type="text" id="address2" name="address2" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="city">City</label>
-                            <input type="text" id="city" name="city" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="state">State/Province</label>
-                            <input type="text" id="state" name="state" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="zip">ZIP/Postal Code</label>
-                            <input type="text" id="zip" name="zip" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="country">Country</label>
-                            <input type="text" id="country" name="country" class="form-control">
-                        </div>
-                    </div>
-                    <!-- Tab 5: Account Type -->
-                    <div class="step">
-                        <h2 class="font-weight-bold">Account Type</h2>
-                        <div class="custom-radio-group">
-                            <div class="custom-option">
-                                <input type="radio" id="custom-advertiser" name="customAccountType" value="advertiser" required>
-                                <label for="custom-advertiser">
-                                    <div>Advertiser</div>
-                                    <p>Create campaigns for your organization</p>
-                                </label>
+            <div class="col-md-6  d-flex flex-column justify-content-center bg-white">
+                <div class="right">
+                    <form id="multiStepForm" class="signup-form" action="/signup" method="post">
+                        <!-- Tab 1: Personal Information -->
+                        <div class="step active">
+                            <h2 class="font-weight-bold">Sign up</h2>
+                            <h3 class="signup-link">Get your campaign up and running in just minutes.</h3>
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="form-control" required>
                             </div>
-                            <div class="custom-divider"></div>
-                            <div class="custom-option">
-                                <input type="radio" id="custom-agency" name="customAccountType" value="agency" required>
-                                <label for="custom-agency">
-                                    <div>Agency</div>
-                                    <p>Create campaigns on behalf of your clients</p>
-                                </label>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" class="form-control" required>
                             </div>
                         </div>
-                    </div>
-                    <!-- Previous and Next buttons -->
-                    <div class="form-group button-container">
-                        <div class="prev">
-                            <img src="../images/prev.png"/>
+                        <!-- Tab 2: Organization Information -->
+                        <div class="step">
+                            <h2 class="signup-link">Enter your organization info</h2>
+                            <div class="form-group">
+                                <label for="orgName">Organization Name</label>
+                                <input type="text" id="orgName" name="orgName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="industry">Industry</label>
+                                <select id="industry" name="industry" class="form-control select">
+                                    <option value="">Select Industry</option>
+                                    <option value="IT">IT</option>
+                                    <option value="Finance">Finance</option>
+                                    <option value="Healthcare">Healthcare</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="website">Website</label>
+                                <input type="url" id="website" name="website" class="form-control">
+                            </div>
                         </div>
-                        <button type="button" class="submit next btn btn-primary">Next</button>
-                        <button type="submit" class="submit btn btn-success" style="display: none;">Submit</button>
-                    </div>
-                </form>
+                        <!-- Tab 3: OTP Verification -->
+                        <div class="step">
+                            <h2 class="font-weight-bold">OTP Verification</h2>
+                            <p>We just sent you an SMS with a 4-digit code to +000 123546. Please enter the code below.</p>
+                            <div class="form-group">
+                                <input type="text" id="otp" name="otp" class="form-control" maxlength="4" pattern="[0-9]{4}">
+                            </div>
+                        </div>
+                        <!-- Tab 4: Location Information -->
+                        <div class="step">
+                            <h2 class="font-weight-bold">Location Information</h2>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" name="address" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="address2">Address Line 2</label>
+                                <input type="text" id="address2" name="address2" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State/Province</label>
+                                <input type="text" id="state" name="state" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">ZIP/Postal Code</label>
+                                <input type="text" id="zip" name="zip" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input type="text" id="country" name="country" class="form-control">
+                            </div>
+                        </div>
+                        <!-- Tab 5: Account Type -->
+                        <div class="step">
+                            <h2 class="font-weight-bold">Account Type</h2>
+                            <div class="custom-radio-group">
+                                <div class="custom-option">
+                                    <input type="radio" id="custom-advertiser" name="customAccountType" value="advertiser" required>
+                                    <label for="custom-advertiser">
+                                        <div>Advertiser</div>
+                                        <p>Create campaigns for your organization</p>
+                                    </label>
+                                </div>
+                                <div class="custom-divider"></div>
+                                <div class="custom-option">
+                                    <input type="radio" id="custom-agency" name="customAccountType" value="agency" required>
+                                    <label for="custom-agency">
+                                        <div>Agency</div>
+                                        <p>Create campaigns on behalf of your clients</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Previous and Next buttons -->
+                        <div class="form-group button-container">
+                            <div class="prev">
+                                <img src="../images/prev.png" alt="Previous">
+                            </div>
+                            <button type="button" class="submit next btn ">Next</button>
+                            <button type="submit" class="submit btn " style="display: none;">Submit</button>
+                        </div>
+                    </form>
+                </div>
                 <!-- Bottom section -->
                 <div class="bottom">
                     <hr>
