@@ -19,6 +19,11 @@ app.get('/signup', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'signup.html'));
 });
 
+// Route to serve the signup page
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', '/pages/login.html'));
+});
+
 // Route to handle signup form submission
 app.post('/signup', async (req, res) => {
     const {

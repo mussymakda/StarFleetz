@@ -1,58 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <meta name="description" content="Publicidad exterior que aprovecha el transporte compartido. Muestra publicidad y entretenimiento dentro del vehículo dirigido a un público determinado.">
+    <title>Publicidad y Entretenimiento en Transporte Compartido</title>
+    <link rel="stylesheet" href="indexstyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-    <div class="row">
-        <div class="col-md-6 left d-flex justify-content-center align-items-center">
-            <img class="logo img-fluid" src="images/logo.png" alt="Logo">
+    <header>
+        <nav class="navbar">
+            <div class="logo" onclick="scrollToSection('home')"><img style="height: 100%;width: 30%;" src="images/logo.png"></div>
+            <div class="nav-links">
+                <div class="nav-link" onclick="scrollToSection('publicidad')">Publicidad</div>
+                <div class="nav-link" onclick="scrollToSection('conductor')">Conductor</div>
+                <div class="nav-link" onclick="scrollToSection('contacto')">Contáctanos</div>
+            </div>
+            <button class="btn iniciar-campana" onclick="window.location.href='#'">Iniciar Campaña</button>
+        </nav>
+    </header>
+    
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <h1 class="headline">Publicidad en Transporte Compartido</h1>
+            <h2 class="subheadline">Entrega publicidad geolocalizada a una audiencia cautiva a través de pantallas interactivas en vehículos de transporte compartido.</h2>
+            <button class="btn btn-primary" onclick="window.location.href='#'">Iniciar Campaña</button>
         </div>
-        <div class=" col-md-6  flex-column justify-content-center bg-white">
-            <div class="right">
-                <form class="login-form" action="/login" method="POST">
-                    <h2>Sign in</h2>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+    </section>
     
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-    
-                    <div class="options row">
-                        <div class="remember-me">
-                            <div class="remember-checkbox"></div>
-                            <div class="remember-text">Remember Me</div>
-                        </div>
-                        <div class="forgot-password">Forgot password?</div>
-                    </div>
-    
-                    <button type="submit" class="submit">Sign In</button>
-    
-                    <p class="signup">Don't have an account? <a href="pages/signup.html">Sign up</a></p>
-                </form>
-               
+    <section id="publicidad" class="info-section">
+        <div class="info-content">
+            <div class="text-content">
+                <h1 class="section-title">Plataforma de Publicidad Exterior de Autoservicio</h1>
+                <h2 class="section-subtitle">Crea una cuenta gratis y mide el rendimiento en tiempo real. Campañas que comienzan desde $3,000.</h2>
+                <p class="section-description">La publicidad en transporte compartido te permite alcanzar a tu audiencia objetivo en un entorno cautivo con 30 segundos de permanencia. Utiliza códigos QR para aumentar las visitas a tu sitio web y geo-localiza audiencias hiperlocales para maximizar las visitas a la tienda.</p>
+                <button class="btn btn-primary" onclick="window.location.href='#'">Iniciar Campaña</button>
             </div>
-            <div class="bottom">
-                <hr>
-                <footer>
-                    <p>By proceeding, you agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy
-                            Policy</a></p>
-                    <div class="links">
-                        <a href="#">Help</a>
-                        <a href="#">Privacy</a>
-                        <a href="#">Terms</a>
-                    </div>
-                </footer>
+            <div class="icon-list">
+                <i class="fas fa-bullseye fa-3x"></i>
+                <i class="fas fa-chart-line fa-3x"></i>
+                <i class="fas fa-mobile-alt fa-3x"></i>
             </div>
-        </div>        
-    </div>
+        </div>
+    </section>
+    
+    <section id="conductor" class="info-section black-section">
+        <div class="info-content">
+            <div class="text-content">
+                <h1 class="section-title">Instala un dispositivo Mobiplay</h1>
+                <h2 class="section-subtitle">Gana pagos directos en efectivo, propinas más altas y mejores calificaciones.</h2>
+                <h3 class="section-subtitle">Mejora la experiencia de transporte compartido de tus clientes al instalar un dispositivo Mobiplay.</h3>
+                <ul class="steps-list">
+                    <li>Asegura tu dispositivo</li>
+                    <li>Conecta la tableta</li>
+                    <li>Comienza a ganar dinero.</li>
+                </ul>
+                <button class="btn btn-secondary" onclick="window.location.href='#'">Contáctanos</button>
+            </div>
+            <div class="image-placeholder">
+                <img src="https://via.placeholder.com/400x300" alt="Driver with Mobiplay device">
+            </div>
+        </div>
+    </section>
+    
+    <section id="contacto" class="contact-section">
+        <h1 class="section-title">Contáctanos</h1>
+        <h2 class="section-subtitle">Completa el formulario a continuación para ponerte en contacto.</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Nombre" required>
+            <input type="text" placeholder="Apellido" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="tel" placeholder="Número de teléfono" required>
+            <select required>
+                <option value="" disabled selected>Seleccione</option>
+                <option value="conductor">Soy conductor</option>
+                <option value="anunciante">Soy anunciante</option>
+            </select>
+            <textarea placeholder="Descripción" required></textarea>
+            <label>
+                <input type="checkbox" required> He leído los <a href="#terminos">términos y condiciones</a>
+            </label>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </section>
+    
+    <section id="geolocalizaciones" class="info-section">
+        <div class="info-content">
+            <div class="text-content">
+                <h1 class="section-title">¡Geolocalizaciones próximamente!</h1>
+            </div>
+            <div class="map-placeholder">
+                <img src="https://via.placeholder.com/600x400" alt="Mapa de México">
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo" onclick="scrollToSection('home')">Logo</div>
+            <div class="footer-links">
+                <a href="#terminos">Términos y Condiciones</a>
+                <a href="#privacidad">Política de Privacidad</a>
+            </div>
+            <div class="social-media-icons">
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+            <p>&copy; 2024 Publicidad y Entretenimiento en Transporte Compartido. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <script src="scroll-animations.js"></script>
 </body>
-
 </html>
